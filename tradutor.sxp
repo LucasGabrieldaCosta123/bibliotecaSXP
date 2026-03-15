@@ -1,0 +1,18 @@
+Titulo("Biblioteca de Tradução");
+
+# Função para traduzir de Português para outra língua
+# Ex: Tradutor.Para("Olá mundo", "en-US")
+Funcao Tradutor.Para(texto, lingua_destino) {
+    # Truque: Substituir espaços por %20 para a URL não quebrar
+    Definir safe_txt = Substituir(texto, " ", "%20");
+    
+    # Monta a URL da API
+    Definir url = "https://api.mymemory.translated.net/get?q=" + safe_txt + "&langpair=pt-BR|" + lingua_destino;
+    
+    # Baixa e processa
+    Definir resposta = Fetch(url);
+    Definir dados = Json(resposta);
+    
+    # Extrai apenas o texto traduzido do JSON complexo
+    Definir Tradutor.Resultado = dados['responseData']['translatedText'];
+}
