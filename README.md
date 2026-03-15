@@ -81,10 +81,6 @@ Falar("Objeto criado: ${p['nome']}");
 - Dados: Json, TextoJson, BD (SQLite).
 - Outros: Cronometro, Mouse, Janela.
 
-  
-### Dica:
-Salve esse conteúdo em um arquivo chamado `README.md` na raiz do seu projeto. Se você colocar no GitHub, esse texto aparecerá formatado bonitinho na página inicial do repositório.
-
 <!--
 [PROMPT_SUGGESTION]Como criar um arquivo de licença (LICENSE) MIT para o meu projeto?[/PROMPT_SUGGESTION]
 [PROMPT_SUGGESTION]Crie um changelog (CHANGELOG.md) listando todas as versões e mudanças que fizemos até agora.[/PROMPT_SUGGESTION]
