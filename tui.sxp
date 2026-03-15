@@ -1,0 +1,32 @@
+Titulo("Terminal User Interface");
+
+# Cria uma caixa decorada em volta do texto
+Funcao TUI.Caixa(mensagem) {
+    Definir tam = Tamanho(mensagem);
+    
+    # Cria a linha de cima e de baixo (multiplica o caractere =)
+    Definir largura = tam + 4;
+    Definir linha = "=" * largura;
+    
+    Falar("&b" + linha);
+    Falar("&b| &r" + mensagem + " &b|");
+    Falar("&b" + linha + "&r");
+}
+
+# Cria uma barra de progresso animada
+Funcao TUI.BarraCarregando() {
+    Definir i = 1;
+    Enquanto (i < 11) {
+        Limpar();
+        # Cria a barra visual (Ex: [###-------])
+        Definir hashtags = "#" * i;
+        Definir tracos_num = 10 - i;
+        Definir tracos = "-" * tracos_num;
+        
+        TUI.Caixa("Instalando: [" + hashtags + tracos + "]");
+        
+        Esperar(0.2);
+        Definir i = i + 1;
+    }
+    Falar("&aConcluído!");
+}
